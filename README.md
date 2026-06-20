@@ -1,14 +1,10 @@
-<p align="center">
-  <a href="https://openjob.io">
-    <img alt="openjob" src="./public/image/logo.png">
-  </a>
-</p>
+
 
 <p align="center">
   A distributed task scheduling framework.
 </p>
 
-> **[中文](README-zh.md)**
+
 ## Introduction
 **Openjob** is A distributed and high-performance task scheduling framework that supports multiple cronjob, delay task, workflow, lightweight distributed computing, unlimited horizontal scaling, with high scalability and fault tolerance. Also has permission management, powerful alarm monitoring, and support multiple languages.
 * High reliability
@@ -42,54 +38,8 @@
 |Alarms|No|email|email|* custom event<br>* email<br>* webhook|
 |Performance|Every task scheduling try to acquire a lock through the database, causes a high pressure on the database|ZooKeeper  is performance bottleneck|Task scheduling is only by master, causes a high pressure on master|Uses sharding algorithm, each node can be scheduled without lock, supports unlimited horizontal scaling, and supports big task scheduling|
 
-## Maven dependency
-```xml
-<openjob.worker.version>1.0.7</openjob.worker.version>
-<dependency>
-    <groupId>io.openjob.worker</groupId>
-    <artifactId>openjob-worker-core</artifactId>
-    <version>${openjob.worker.version}</version>
-</dependency>
 
-<!--If your project base on `Spring Boot`, you can directly use the following dependencies-->
-<dependency>
-    <groupId>io.openjob.worker</groupId>
-    <artifactId>openjob-worker-spring-boot-starter</artifactId>
-    <version>${openjob.worker.version}</version>
-</dependency>
-```
-## Documentation
-- [Official website](https://openjob.io)
-- [Official documentation](https://openjob.io/docs/intro)
-## Live demo
-- Find the [live demo](https://demo.openjob.io) on our website.
-  - username: openjob
-  - password: openjob.io
-## Contact
-- Gitter: https://gitter.im/openjob/openjob
-- Discord: https://discord.gg/ZUmX57fKa5
-- QQ Group: 849015265
-- WeChat Assistant:
 
- <img alt="WeChat" width="200px" src="./public/image/wx.png">
- 
-- WeAccount:
-
-<img alt="WeChat" width="200px" src="./public/image/gzh.jpg">
-
-- Mail list:
-  * swoft@qq.com
-
-## Openjob ecosystem
-- [Openjob Website](https://github.com/open-job/openjob-website) - Openjob official website
-- [Openjob UI](https://github.com/open-job/openjob-ui) - UI for Openjob
-- [Openjob Samples](https://github.com/open-job/openjob-samples) - Samples for Openjob
-- [Openjob Docker](https://github.com/open-job/openjob-docker) - Openjob integration with docker
-
-## Contributors
-This project exists thanks to all the people who contribute. [[Contributors](https://github.com/open-job/openjob/graphs/contributors)].
-
-## License
 Openjob is under the Apache 2.0 license. See the [LICENSE](LICENSE) file for details.
 
 
